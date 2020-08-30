@@ -101,6 +101,27 @@ body {
   font-size: 24px;
   color: #999999;
 }
+
+/* -------- footer -------- */
+#footer { position: relative; padding: 80px 0 40px 0;}
+#footer div.content-box { max-width: 1200px; margin: 0 auto; }
+#footer div.content-box ul.link { overflow: hidden; margin-bottom: 20px; }
+#footer div.content-box ul.link li { float: left; }
+#footer div.content-box ul.link li + li { margin-left: 20px;}
+#footer div.content-box address { overflow: hidden; margin-bottom: 30px; }
+#footer div.content-box address > div { float: left; width: 14%; }
+#footer div.content-box address > div:last-child { width: 60%;}
+#footer div.content-box address > div + div { margin-left: 6%; }
+#footer div.content-box address > div h3 { margin-bottom: 20px; }
+#footer div.content-box address > div li { font-size: 13px; }
+#footer div.content-box address > div li + li { margin-top: 10px;}
+#footer div.content-box address > div li span {margin-right: 10px; color: #aaa; }
+@media screen and (max-width: 1240px) {
+  #footer {
+    padding : 80px 10px 40px 10px;
+  }
+}
+
 /* -------- main-visual -------- */
 #main-visual { position: relative; height: 850px; }
 #main-visual ul.slide li {
@@ -228,7 +249,6 @@ body {
 #main-dev > div.content-box {
   max-width: 1200px;
   margin: 0 auto;
-  /* overflow: hidden; */
   box-sizing: border-box;
   text-align: center;
 }
@@ -301,7 +321,7 @@ body {
 
 #main-dev h3 {
   text-align: left;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   font-size: 20px;
 }
 #main-dev div.main-slide { position: relative; }
@@ -309,7 +329,6 @@ body {
   position: relative;
   max-width: 1100px;
   margin: 0 auto;
-  /* overflow: hidden; */
 }
 #main-dev p.dummy img { width: 100%; opacity: 0; }
 #main-dev div.main-slide ul.slide {
@@ -335,16 +354,14 @@ body {
   width: 95%;
   height: 150px;
   text-align: left;
-  background: #f2f2f2;
   display: none;
 }
-#main-dev div.main-slide ul.slide li:last-child { display: block; }
-#main-dev div.main-slide ul.content li:last-child { display: block; }
+#main-dev div.main-slide ul.slide li:nth-child(3) { display: block; }
+#main-dev div.main-slide ul.content li:nth-child(3) { display: block; }
 #main-dev div.main-slide ul.content li img {
   position: absolute;
   left: -88px;
-  bottom: -4px;
-  /* max-height: 200px; */
+  bottom: 0;
   z-index: 1;
 }
 #main-dev div.main-slide ul.content li:last-child img {
@@ -355,16 +372,14 @@ body {
   left: 0;
   width: 90%;
   height: 150px;
-  padding-top: 20px;
   padding-left: 110px;
   line-height: 150px;
   font-size: 110px;
   font-weight: 700;
-  background: #f9f9f9;
 }
 #main-dev div.main-slide ul.content li:first-child em {
   width: 100%;
-  padding-left: 0;
+  color: #ffffff;
 }
 #main-dev div.main-slide ul.content li:last-child em {
   font-size: 55px;
@@ -372,11 +387,13 @@ body {
 #main-dev div.main-slide ul.content li p {
   position: absolute;
   right: 0;
-  top: calc(50% + 14px);
+  top: 50%;
   transform: translate(0, -50%);
   width: 45%;
   box-sizing: border-box;
   padding: 0 20px;
+  color: #222222;
+  font-weight: 700;
 }
 #main-dev div.main-slide ul.content li a {
   position: absolute;
@@ -411,9 +428,24 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+@media screen and (max-width: 1340px) {
+  #main-dev div.main-slide p.control a.prev { left: -30px; }
+  #main-dev div.main-slide p.control a.next { right: -30px; }
+  #main-dev h3 { text-align: center; }
+}
+@media screen and (max-width: 1240px) {
+  #main-dev div.main-slide ul.content li img {
+    max-height: 200px;
+  }
+  #main-dev div.main-slide ul.content li:last-child img {
+    left: 0;
+  } 
+  #main-dev div.main-slide p.control a.prev { left: 0; }
+  #main-dev div.main-slide p.control a.next { right: 0; }
+}
 
 /* -------- main-online -------- */
-#main-online { position: relative; padding: 100px 0; background: #f2f2f2; }
+#main-online { position: relative; padding: 200px 0; background: #f2f2f2; }
 #main-online > div.content-box {
   max-width: 1200px;
   margin: 0 auto;
@@ -496,4 +528,9 @@ body {
   color: #ffffff;
   font-size: 16px;
   border: none;
+}
+@media screen and (max-width: 1240px) {
+  #main-online div.content-box {
+    padding: 0 20px;
+  }
 }
